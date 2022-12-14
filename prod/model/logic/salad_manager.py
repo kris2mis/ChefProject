@@ -10,12 +10,21 @@ class SaladManager:
 
         total = 0
 
-        for i in range(dish.size()):
-            product = dish.get(i)
-            if isinstance(product, Product):
-                total += product.kcal
-
+        for pr in dish:
+            if isinstance(pr, Product):
+                total += pr.kcal
         return total
+
+        #переопределеили
+
+        # for i in range(dish.size()):
+        #     product = dish.get(i)
+        #     if isinstance(product, Product):
+        #         total += product.kcal
+        #
+        # return total
+
+
 
     # @staticmethod
     # def calculate_total_price(basket):

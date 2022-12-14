@@ -15,6 +15,8 @@ class Product:
         else:
             if not hasattr(self, "_kcal"):
                 self._kcal = 0
+            else:
+                raise ValueError("Calorie content of the dish was wrong")
 
     @kcal.deleter
     def kcal(self):
